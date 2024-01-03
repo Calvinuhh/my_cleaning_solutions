@@ -1,11 +1,13 @@
-body {
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 :root {
   --font_principal: "Roboto Slab";
-  --rosado_claro: #e77bd7;
-  --color_tierra: #c5b26c;
+  --cafe: #9d7a5a;
+  --color_tierra: #d3c1823a;
   --transparente: #ffffff00;
 }
 
@@ -18,29 +20,30 @@ p {
 
 .idioma {
   display: flex;
-  background-color: var(--rosado_claro);
+  background-color: var(--cafe);
   flex-direction: row-reverse;
 }
 
 #parrafo-idioma {
-  background-color: var(--color_tierra);
+  background-color: var(--cafe);
   padding: 10px 35px;
   margin: 0;
+  color: white;
   margin-right: 100px;
   font-weight: bold;
   font-size: 20px;
-  transition: background-color 0.3s ease;
-  transition: color 0.3s ease;
+  transition: 0.3s ease;
   border-radius: 10px;
 }
 
 #parrafo-idioma:hover {
-  color: white;
+  color: black;
   cursor: pointer;
-  background-color: #d6bd6193;
+  background-color: var(--color_tierra);
 }
 
 #titulo-principal {
+  color: white;
   font-weight: bold;
 }
 
@@ -49,9 +52,13 @@ a {
 }
 
 .contenedor-header {
-  background-color: beige;
   display: flex;
   justify-content: space-evenly;
+  background: linear-gradient(rgba(126, 109, 109, 0.836), rgb(0 0 0 / 65%)),
+    url(../img/desinfectar-casa.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 350px;
 }
 
 #header {
@@ -70,14 +77,22 @@ a {
 }
 
 .nav-bar_a {
-
   background-color: #d6bd6193;
-  padding: 8px;
+  padding: 8px 10px;
   border-radius: 8px;
+  transition: 0.3s ease;
+}
 
+.nav-bar_a:hover {
+  background-color: var(--color_tierra);
+}
+
+.actual {
+  background-color: var(--color_tierra);
 }
 
 a {
+  color: white;
   font-family: var(--font_principal);
   font-size: 20px;
 }
