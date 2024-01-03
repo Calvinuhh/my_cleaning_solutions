@@ -25,18 +25,17 @@ p {
 #parrafo-idioma {
   background-color: var(--color_tierra);
   padding: 10px 35px;
-
   margin: 0;
   margin-right: 100px;
   font-weight: bold;
   font-size: 20px;
   transition: background-color 0.3s ease;
   transition: color 0.3s ease;
+  border-radius: 10px;
 }
 
 #parrafo-idioma:hover {
   color: white;
-  background-color: var(--transparente);
   cursor: pointer;
   background-color: #d6bd6193;
 }
@@ -68,6 +67,14 @@ a {
   display: flex;
   padding: 0 150px;
   gap: 70px;
+}
+
+.nav-bar_a {
+
+  background-color: #d6bd6193;
+  padding: 8px;
+  border-radius: 8px;
+
 }
 
 a {
