@@ -24,13 +24,66 @@
 
       <div class="nav-bar_contenedor">
         <nav class="nav-bar">
-          <a class="nav-bar_a " href="index.html">Inicio</a>
+          <a class="nav-bar_a" href="index.html">Inicio</a>
           <a class="nav-bar_a" href="nosotros.html">Nosotros</a>
           <a class="nav-bar_a" href="servicios.html">Servicios</a>
           <a class="nav-bar_a actual" href="contactanos.html">Contactanos</a>
         </nav>
       </div>
     </div>
+
+    <form class="formulario">
+      <div class="contenedor-formulario">
+        <h2 class="formulario-titulo">
+          Contactanos y dejanos un mensaje llenando estos campos!
+        </h2>
+
+        <div class="div-input">
+          <label for="name">Nombre</label>
+          <input
+            id="name"
+            class="input"
+            type="text"
+            placeholder="tu nombre..."
+          />
+        </div>
+
+        <div class="div-input">
+          <label for="apellido">Apellido</label>
+          <input
+            id="apellido"
+            class="input"
+            type="text"
+            placeholder="tu apellido..."
+          />
+        </div>
+
+        <div class="div-input">
+          <label for="mail">Email</label>
+          <input
+            id="email"
+            class="input"
+            type="email"
+            placeholder="tu email..."
+          />
+        </div>
+
+        <div class="div-input">
+          <label for="mensaje">Mensaje</label>
+          <textarea
+            class="input"
+            id="mensaje"
+            placeholder="Escribe tu mensaje..."
+          >
+          </textarea>
+        </div>
+
+        <div class="boton div-input">
+          <button class="btn" type="submit">Enviar</button>
+        </div>
+
+      </div>
+    </form>
 
     <script src="../scripts/app.js"></script>
   </body>
