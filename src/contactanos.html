@@ -79,7 +79,13 @@
 
         <div class="div-input">
           <label for="mensaje">Mensaje</label>
-          <textarea class="input" id="mensaje" placeholder="deja tu mensaje aqui..." name="mensaje" required>
+          <textarea
+            class="input"
+            id="mensaje"
+            placeholder="deja tu mensaje aqui..."
+            name="mensaje"
+            required
+          >
           </textarea>
         </div>
 
@@ -98,8 +104,32 @@
       emailjs.init("YiFITsOlMaQorghAY");
     </script>
 
+    <div class="contenedor-whatsapp_titulo">
+      <h1 id="mensaje-whatsapp">O dejanos un mensaje en Whatsapp!</h1>
+    </div>
 
-    
+    <section class="whatsapp">
+      <div class="div-imagen-whatsapp">
+        <a href="https://wa.link/k5i4g0" target="_blank">
+          <img
+            id="imagen-whatsapp"
+            src="../img/whatsapp-logo-3.png"
+            width="300px"
+            alt="logo whatsapp"
+          />
+        </a>
+      </div>
+
+      <div class="div-qr">
+        <img id="qr" src="../img/wa.link_k5i4g0.png" alt="qr whatsapp" />
+      </div>
+    </section>
+
+    <footer class="footer">
+      <h3 id="texto-footer">
+        My Cleaning Solution - Todos los derechos reservados 2024
+      </h3>
+    </footer>
 
     <script src="../scripts/app.js"></script>
   </body>
