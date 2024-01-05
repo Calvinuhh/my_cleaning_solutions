@@ -119,6 +119,9 @@ a {
 
 #foto-limpieza {
   width: 100%;
+  -webkit-box-shadow: 18px 32px 29px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 18px 32px 29px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: 18px 32px 29px -8px rgba(0, 0, 0, 0.75);
 }
 
 .contenido-parrafo {
@@ -131,7 +134,6 @@ a {
   justify-content: center;
   align-items: flex-start;
   text-align: center;
-  /* background-color: var(--color_tierra); */
 }
 
 .contenedor-formulario {
@@ -139,18 +141,21 @@ a {
   border-radius: 10px;
   border: solid black 2px;
   margin-top: 20px;
+  -webkit-box-shadow: 18px 32px 29px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 18px 32px 29px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: 18px 32px 29px -8px rgba(0, 0, 0, 0.75);
 }
 
 .div-input,
 .formulario-titulo {
   margin: 40px;
 }
+
 .formulario-titulo {
   margin-top: 80px;
 }
 
 .btn {
-
   background-color: var(--cafe);
   width: 100px;
   height: 40px;
@@ -158,6 +163,15 @@ a {
   font-size: 30px;
   cursor: pointer;
   color: white;
+  transition: 0.3s ease;
+  -webkit-box-shadow: 6px 7px 56px 0px rgba(0, 0, 0, 0.87);
+  -moz-box-shadow: 6px 7px 56px 0px rgba(0, 0, 0, 0.87);
+  box-shadow: 6px 7px 56px 0px rgba(0, 0, 0, 0.87);
+}
+
+.btn:hover {
+  color: black;
+  background-color: var(--color_tierra);
 }
 
 @media (max-width: 1150px) {
@@ -181,10 +195,6 @@ a {
     display: flex;
     flex-direction: column;
     margin: 60px;
-  }
-
-  #foto-limpieza {
-    order: 0;
   }
 }
 

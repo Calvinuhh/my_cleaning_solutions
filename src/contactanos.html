@@ -42,9 +42,12 @@
           <label for="name">Nombre</label>
           <input
             id="name"
+            name="name"
             class="input"
             type="text"
+            autocomplete="given-name"
             placeholder="tu nombre..."
+            required
           />
         </div>
 
@@ -52,38 +55,51 @@
           <label for="apellido">Apellido</label>
           <input
             id="apellido"
+            name="apellido"
             class="input"
             type="text"
+            autocomplete="family-name"
             placeholder="tu apellido..."
+            required
           />
         </div>
 
         <div class="div-input">
-          <label for="mail">Email</label>
+          <label for="email">Email</label>
           <input
             id="email"
+            name="email"
             class="input"
             type="email"
+            autocomplete="email"
             placeholder="tu email..."
+            required
           />
         </div>
 
         <div class="div-input">
           <label for="mensaje">Mensaje</label>
-          <textarea
-            class="input"
-            id="mensaje"
-            placeholder="Escribe tu mensaje..."
-          >
+          <textarea class="input" id="mensaje" placeholder="deja tu mensaje aqui..." name="mensaje" required>
           </textarea>
         </div>
 
         <div class="boton div-input">
-          <button class="btn" type="submit">Enviar</button>
+          <input type="submit" class="btn" value="Enviar" />
         </div>
-
       </div>
     </form>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      emailjs.init("YiFITsOlMaQorghAY");
+    </script>
+
+
+    
 
     <script src="../scripts/app.js"></script>
   </body>
