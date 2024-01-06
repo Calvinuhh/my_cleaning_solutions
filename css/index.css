@@ -6,9 +6,9 @@
 
 :root {
   --font_principal: "Roboto Slab";
-  --cafe: #9d7a5a;
-  --color_tierra: #d3c1823a;
-  --transparente: #ffffff00;
+  --cafe: #9e9e9e;
+  --color_tierra: #50505042;
+  --gris_mas_oscuro: #747474b7;
 }
 
 label {
@@ -34,14 +34,13 @@ p {
 
 #parrafo-idioma {
   background-color: var(--cafe);
-  padding: 10px 35px;
+  padding: 10px 30px;
   margin: 0;
   color: white;
   margin-right: 100px;
   font-weight: bold;
   font-size: 20px;
   transition: 0.3s ease;
-  border-radius: 10px;
 }
 
 #parrafo-idioma:hover {
@@ -85,7 +84,7 @@ a {
 }
 
 .nav-bar_a {
-  background-color: #d6bd6193;
+  background-color: var(--cafe);
   padding: 8px 10px;
   border-radius: 8px;
   transition: 0.3s ease;
@@ -119,6 +118,7 @@ a {
 
 #foto-limpieza {
   width: 100%;
+  border-radius: 50px;
   -webkit-box-shadow: 18px 32px 29px -8px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 18px 32px 29px -8px rgba(0, 0, 0, 0.75);
   box-shadow: 18px 32px 29px -8px rgba(0, 0, 0, 0.75);
@@ -157,8 +157,8 @@ a {
 
 .btn {
   background-color: var(--cafe);
-  width: 100px;
-  height: 40px;
+  width: 120px;
+  height: 50px;
   border-radius: 9px;
   font-size: 30px;
   cursor: pointer;
@@ -171,7 +171,7 @@ a {
 
 .btn:hover {
   color: black;
-  background-color: var(--color_tierra);
+  background-color: var(--gris_mas_oscuro);
 }
 
 .contenedor-whatsapp_titulo {
@@ -203,21 +203,18 @@ a {
 }
 
 .footer {
-
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   background-color: var(--color_tierra);
-height: 80px;
-
+  height: 80px;
 }
 
 #texto-footer {
   color: white;
   text-transform: uppercase;
   font-weight: normal;
-
 }
 
 @media (max-width: 1150px) {
