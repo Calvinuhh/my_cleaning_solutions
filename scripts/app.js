@@ -13,7 +13,10 @@ document
     emailjs.sendForm(serviceID, templateID, this).then(
       () => {
         btn.value = "Enviar";
-        alert("Mensaje enviado!");
+        Swal.fire({
+          title: "Formulario enviado!",
+          icon: "success",
+        });
       },
       (err) => {
         btn.value = "Enviar";
