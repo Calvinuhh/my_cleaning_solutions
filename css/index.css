@@ -39,7 +39,7 @@ p {
   font-weight: bold;
   font-size: 20px;
   transition: 0.3s ease;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
 #parrafo-idioma:hover {
@@ -85,7 +85,7 @@ a {
 .nav-bar_a {
   background-color: var(--cafe);
   padding: 8px 10px;
-  border-radius: 8px;
+  border-radius: 4px;
   transition: 0.3s ease;
 }
 
@@ -157,7 +157,7 @@ a {
 
 .btn {
   background-color: var(--cafe);
-  width: 120px;
+  width: 150px;
   height: 50px;
   border-radius: 9px;
   font-size: 30px;

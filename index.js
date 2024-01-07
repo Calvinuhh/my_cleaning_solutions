@@ -6,8 +6,8 @@ const path = require("path");
 
 const app = express();
 app.use(cors());
-app.use(express.json())
-app.use(express.text())
+app.use(express.json());
+app.use(express.text());
 app.use(express.static(path.join(__dirname)));
 
 app.get("/", (req, res) => {
@@ -40,6 +40,23 @@ app.get("/contactanos.html", (req, res) => {
   });
 });
 
+app.get("/index_EN.html", (req, res) => {
+  res.sendFile("/src/index_EN.html", {
+    root: __dirname,
+  });
+});
+
+app.get("/servicios_EN.html", (req, res) => {
+  res.sendFile("/src/servicios_EN.html", {
+    root: __dirname,
+  });
+});
+
+app.get("/contactanos_EN.html", (req, res) => {
+  res.sendFile("/src/contactanos_EN.html", {
+    root: __dirname,
+  });
+});
 
 app.listen(PORT, () => {
   console.log(`Servidor escuchando en puerto: http://localhost:${PORT}
