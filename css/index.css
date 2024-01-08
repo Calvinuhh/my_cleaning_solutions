@@ -263,6 +263,9 @@ a {
 @media (max-width: 633px) {
   .contenedor-header {
     height: 500px;
+    background-position: bottom;
+
+
   }
   .idioma {
     justify-content: center;
