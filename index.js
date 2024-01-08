@@ -1,4 +1,4 @@
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const express = require("express");
 const cors = require("cors");
@@ -18,12 +18,6 @@ app.get("/", (req, res) => {
 
 app.get("/index.html", (req, res) => {
   res.sendFile("/src/index.html", {
-    root: __dirname,
-  });
-});
-
-app.get("/nosotros.html", (req, res) => {
-  res.sendFile("/src/nosotros.html", {
     root: __dirname,
   });
 });
