@@ -197,6 +197,8 @@ a {
   border-radius: 10px;
   border: solid black 2px;
   margin-top: 80px;
+  gap: 20px;
+  height: 650px;
   -webkit-box-shadow: 18px 32px 29px -8px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 18px 32px 29px -8px rgba(0, 0, 0, 0.75);
   box-shadow: 18px 32px 29px -8px rgba(0, 0, 0, 0.75);
@@ -211,10 +213,22 @@ a {
   margin-top: 80px;
   font-family: var(--font_titulos);
 }
+.div-input {
+  height: 40px;
+}
+
+#id-mensaje {
+  margin-bottom: 20px;
+}
+
+.input-text {
+  height: 30px;
+}
 
 .btn {
   background-color: var(--naranja);
   width: 150px;
+  margin-top: 60px;
   height: 50px;
   border-radius: 9px;
   font-size: 30px;
@@ -233,6 +247,7 @@ a {
 
 .contenedor-whatsapp_titulo {
   text-align: center;
+  margin-top: 150px;
   margin-bottom: 90px;
 }
 
