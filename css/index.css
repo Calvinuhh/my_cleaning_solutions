@@ -6,56 +6,45 @@
 
 :root {
   --font_principal: "Roboto Slab";
-  --cafe: #9e9e9e;
-  --color_tierra: #50505042;
-  --gris_mas_oscuro: #747474b7;
+  --font_titulos: "MuseoModerno";
+  --naranja: #ee7225b2;
+  --gris_oscuro: #a0a0a0;
+  --gris_claro: #cfc9cd;
+}
+
+@font-face {
+  font-family: "Impact";
+  src: url(../fonts/impact.ttf);
+  font-weight: bold;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: "Rouna Bold";
+  src: url(../fonts/Rouna-Bold.otf);
+  font-weight: normal;
+  font-style: normal;
 }
 
 label {
-  font-family: var(--font_principal);
+  font-family: "Impact";
 }
 
 body {
-  background: linear-gradient(to top, var(--cafe) 1%, white 65%);
+  background: linear-gradient(to top, var(--naranja) 1%, white 65%);
 }
 
-h1,
-h2,
-h3,
+h1 {
+  font-family: var(--font_titulos);
+}
+
+h2 {
+  font-family: "Rouna Bold";
+}
+
 p {
-  font-family: var(--font_principal);
+  font-family: "Impact";
 }
-
-.idioma {
-  display: flex;
-  flex-direction: column;
-  margin-right: 80px;
-}
-#parrafo-idioma {
-  background-color: var(--cafe);
-  padding: 10px 30px;
-  margin: 0;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  transition: 0.3s ease;
-  border-radius: 4px;
-}
-
-#parrafo-idioma:hover {
-  cursor: pointer;
-  background-color: var(--color_tierra);
-}
-
-#titulo-principal {
-  color: white;
-  font-weight: bold;
-}
-
-a {
-  text-decoration: none;
-}
-
 .contenedor-header {
   display: flex;
   justify-content: space-evenly;
@@ -64,6 +53,36 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   height: 450px;
+  position: relative;
+}
+
+#parrafo-idioma {
+  background-color: var(--naranja);
+  padding: 10px 30px;
+  margin: 0;
+  color: white;
+  font-family: "Rouna Bold";
+  font-size: 20px;
+  transition: 0.3s ease;
+  border-radius: 4px;
+  position: absolute;
+  right: 50px;
+}
+
+#parrafo-idioma:hover {
+  cursor: pointer;
+  background-color: var(--gris_oscuro);
+  color: black;
+  padding: 14px 34px;
+
+}
+
+#logo-header {
+  width: 400px;
+}
+
+a {
+  text-decoration: none;
 }
 
 #header {
@@ -83,18 +102,21 @@ a {
 }
 
 .nav-bar_a {
-  background-color: var(--cafe);
+  font-family: "Rouna Bold";
+  background-color: var(--naranja);
   padding: 8px 10px;
   border-radius: 4px;
   transition: 0.3s ease;
 }
 
 .nav-bar_a:hover {
-  background-color: var(--color_tierra);
+  color: black;
+  background-color: var(--gris_oscuro);
+  padding: 12px 14px;
 }
 
 .actual {
-  background-color: var(--color_tierra);
+  background-color: var(--gris_oscuro);
 }
 
 a {
@@ -137,7 +159,7 @@ a {
 }
 
 .contenedor-formulario {
-  background-color: var(--color_tierra);
+  background-color: var(--gris_oscuro);
   border-radius: 10px;
   border: solid black 2px;
   margin-top: 80px;
@@ -156,7 +178,7 @@ a {
 }
 
 .btn {
-  background-color: var(--cafe);
+  background-color: var(--naranja);
   width: 150px;
   height: 50px;
   border-radius: 9px;
@@ -171,7 +193,7 @@ a {
 
 .btn:hover {
   color: black;
-  background-color: var(--gris_mas_oscuro);
+  background-color: var(--gris_oscuro);
 }
 
 .contenedor-whatsapp_titulo {
@@ -207,8 +229,9 @@ a {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: var(--color_tierra);
+  background-color: var(--gris_oscuro);
   height: 80px;
+  font-family: "Rouna Bold";
 }
 
 #texto-footer {
@@ -223,7 +246,23 @@ a {
     justify-content: center;
     text-align: center;
     align-items: center;
-    position: relative;
+  }
+
+  #header {
+    padding: 10px 150px;
+  }
+  .idioma {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+
+  }
+  #logo-header {
+    width: 350px;
+  }
+
+  .nav-bar_contenedor {
+    margin-bottom: 80px;
   }
 
   .nav-bar {
@@ -249,11 +288,6 @@ a {
     display: flex;
     justify-content: center;
   }
-  .idioma {
-    position: absolute;
-    top: 0px;
-    right: 50px;
-  }
 
   .formulario {
     margin-bottom: 100px;
@@ -264,19 +298,8 @@ a {
   .contenedor-header {
     height: 500px;
     background-position: bottom;
+  }
 
-
-  }
-  .idioma {
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-  }
-  #parrafo-idioma {
-    padding: 10px;
-    margin: 0;
-  }
   .div-articulo {
     margin: 30px;
   }
