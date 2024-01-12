@@ -359,4 +359,8 @@ a {
   .div-articulo {
     margin: 30px;
   }
+
+  .contenedor-formulario {
+    height: 740px;
+  }
 }
