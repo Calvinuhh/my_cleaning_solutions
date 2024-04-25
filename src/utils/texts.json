@@ -1,0 +1,94 @@
+{
+  "indexPageEspañol": {
+    "p1": "¡Somos una empresa de limpieza ubicada en Miami, Florida! Llevamos más de 3 años brindando nuestros servicios de limpieza a muchos usuarios que están muy conformes con la atención brindada, podemoshacer limpieza profunda de Apartamentos, Casas u Oficinas!",
+    "p2": "¿Tienes un espacio que necesite limpieza? ¿Necesitas una persona capacitada en hacer una buena limpieza del lugar? ¡Puedes confiar en nosotros! ¡Contacta vía WhatsApp o correo electrónico en la pestaña de contactarnos para así poder brindarte nuestros servicios! ¡Estaremos encantados de dejar reluciente tu espacio!"
+  },
+  "indexPageEnglish": {
+    "p1": "We are a cleaning business located in Miami, Florida! We have been providing our cleaning services for more than 3 years to many users who are very satisfied with the attention provided, we can do deep cleaning of apartments, houses or offices!",
+    "p2": "Do you have a space that needs cleaning? Do you need a person trained to do a good cleaning of the place? You can trust us! Contact us via WhatsApp or email in the contact us tab so we can provide you with our services! We will be happy to leave your space sparkling clean!"
+  },
+  "servicesPageEspañol": {
+    "p1": "¡Brindamos servicio de limpieza de cocina! ¡Dejaremos tu cocina reluciente y brillante para que puedas cocinar sin preocuparte de gérmenes y bacterias!",
+    "p2": " Limpieza de hogares y apartamentos! limpieza de cuartos,ventanas, alfombras, muebles y baños, dejamos tus lugares importantes como nuevos!",
+    "p3": "¡Oficinas, escritorios, salas de reuniones, sillas, vaciado de papeleras, tenemos los recursos y los utensilios necesarios para dejar tus lugares de trabajo bien aseados, que se verán relucientes y listos para ponerse manos a la obra!"
+  },
+  "servicesPageEnglish": {
+    "p1": "We provide kitchen cleaning services! We'll leave your kitchen sparkling and shiny so you can sparkling and shiny so you can cook without worrying about germs and bacteria! germs and bacteria!",
+    "p2": "Home and apartment cleaning! cleaning of rooms, windows, carpets, furniture and bathrooms, we leave your important places like new!",
+    "p3": "Offices, desks, meeting rooms, chairs, wastebasket emptying,  have the resources and tools you need to leave your workplaces looking shiny and ready to get to work!"
+  },
+
+  "footerEspañol": "My Cleaning Solution - Todos los derechos reservados 2024",
+  "footerEnglish": "My Cleaning Solution - All rights reserved 2024",
+
+  "headerEspañol": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "contact": "Contactanos"
+  },
+
+  "headerEnglish": {
+    "home": "Home",
+    "services": "Services",
+    "contact": "Contact Us"
+  },
+
+  "headerLanguage": {
+    "español": "Español",
+    "english": "English"
+  },
+
+  "formEspañol": {
+    "form": " Contactanos y dejanos un mensaje llenando estos campos!",
+    "name": "Nombre",
+    "lastName": "Apellido",
+    "email": "Email",
+    "message": "Mensaje",
+    "placeholderName": "Tu Nombre...",
+    "placeholderLastName": "Tu Apellido...",
+    "placeholderEmail": "Tu Email...",
+    "placeholderMessage": "Deja tu mensaje aqui...",
+    "btnSend": "Enviar"
+  },
+  "formEnglish": {
+    "form": "Contact us and leave us a message by filling out these fields!",
+    "name": "Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "message": "Message",
+    "placeholderName": "Your Name...",
+    "placeholderLastName": "Your Lastname...",
+    "placeholderEmail": "Your Email...",
+    "placeholderMessage": "leave your message here...",
+    "btnSend": "Send"
+  },
+  "messageContact": {
+    "spanish": "O dejanos un mensaje en Whatsapp!",
+    "english": "Or leave us a message on Whatsapp!"
+  },
+
+  "titles": {
+    "spanish": {
+      "home": "Inicio",
+      "services": "Servicios",
+      "contact": "Contactanos"
+    },
+    "english": {
+      "home": "Home",
+      "services": "Services",
+      "contact": "Contact Us"
+    }
+  },
+  "routesSpanish": {
+    "index": "/",
+    "services": "/servicios",
+    "contact": "contacto",
+    "redirect": "/english"
+  },
+  "routesEnglish": {
+    "index": "/english",
+    "services": "/services",
+    "contact": "contact",
+    "redirect": "/"
+  }
+}

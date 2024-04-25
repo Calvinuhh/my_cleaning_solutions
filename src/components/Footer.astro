@@ -1,0 +1,28 @@
+---
+const { footer } = Astro.props;
+---
+
+<footer class="contenedor_footer">
+  <h3 id="footer">
+    {footer}
+  </h3>
+</footer>
+
+<style>
+  .contenedor_footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: var(--gris_oscuro);
+    height: 80px;
+    font-family: "Rouna Bold";
+  }
+
+  #footer {
+    color: white;
+    text-transform: uppercase;
+  }
+</style>
+
+<script></script>

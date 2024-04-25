@@ -1,0 +1,259 @@
+---
+import pic1 from "../assets/img/whatsapp-logo-3.png";
+import pic2 from "../assets/img/wa.link_97qtjx_EN.png";
+
+const { data, message } = Astro.props;
+---
+
+<form id="formulario">
+  <div id="contenedor_form">
+    <h2 class="formulario-titulo">
+      {data.form}
+    </h2>
+
+    <div class="div-input">
+      <label for="name"> {data.name}</label>
+      <input
+        id="name"
+        name="name"
+        class="input-text"
+        type="text"
+        minlength="2"
+        maxlength="25"
+        autocomplete="given-name"
+        placeholder={data.placeholderName}
+        required
+      />
+    </div>
+
+    <div class="div-input">
+      <label for="apellido">{data.lastName}</label>
+      <input
+        id="apellido"
+        name="apellido"
+        class="input-text"
+        type="text"
+        minlength="2"
+        maxlength="25"
+        autocomplete="family-name"
+        placeholder={data.placeholderLastName}
+        required
+      />
+    </div>
+
+    <div class="div-input">
+      <label for="email">{data.email}</label>
+      <input
+        id="email"
+        name="email"
+        class="input-text"
+        type="email"
+        autocomplete="email"
+        placeholder={data.placeholderEmail}
+        required
+      />
+    </div>
+
+    <div id="id-mensaje" class="div-input">
+      <label for="mensaje">{data.message}</label>
+      <textarea
+        class="input"
+        id="mensaje"
+        placeholder={data.placeholderMessage}
+        name="mensaje"
+        cols="30"
+        rows="5"
+        required
+      >
+      </textarea>
+    </div>
+
+    <div class="boton div-input">
+      <input type="submit" class="btn" value={data.btnSend} />
+    </div>
+  </div>
+</form>
+
+<div class="contenedor-whatsapp_titulo">
+  <h1 id="mensaje-whatsapp">{message}</h1>
+</div>
+
+<section class="whatsapp">
+  <div class="div-imagen-whatsapp">
+    <a href="https://wa.link/97qtjx" target="_blank">
+      <img
+        loading="lazy"
+        id="imagen-whatsapp"
+        src={pic1.src}
+        width="300px"
+        alt="logo whatsapp"
+      />
+    </a>
+  </div>
+
+  <div class="div-qr">
+    <img loading="lazy" id="qr" src={pic2.src} alt="qr whatsapp" />
+  </div>
+</section>
+
+<style>
+  #formulario {
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  #contenedor_form {
+    background-color: var(--gris_claro);
+    border-radius: 10px;
+    border: solid black 2px;
+    margin-top: 80px;
+    gap: 20px;
+    height: 650px;
+    -webkit-box-shadow: 18px 32px 29px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 18px 32px 29px -8px rgba(0, 0, 0, 0.75);
+    box-shadow: 18px 32px 29px -8px rgba(0, 0, 0, 0.75);
+  }
+
+  .div-input,
+  .formulario-titulo {
+    margin: 40px;
+  }
+  .formulario-titulo {
+    margin-top: 80px;
+    font-family: var(--font_titulos);
+  }
+  .div-input {
+    height: 40px;
+  }
+
+  #id-mensaje {
+    margin-bottom: 20px;
+  }
+
+  .input-text {
+    height: 30px;
+  }
+
+  label {
+    font-family: "impact";
+  }
+
+  .btn {
+    background-color: var(--naranja);
+    width: 150px;
+    margin-top: 60px;
+    height: 50px;
+    border-radius: 9px;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s ease;
+    -webkit-box-shadow: 6px 7px 56px 0px rgba(0, 0, 0, 0.87);
+    -moz-box-shadow: 6px 7px 56px 0px rgba(0, 0, 0, 0.87);
+    box-shadow: 6px 7px 56px 0px rgba(0, 0, 0, 0.87);
+  }
+
+  .btn:hover {
+    color: black;
+    transform: scale(1.04);
+    background-color: var(--gris_oscuro);
+  }
+
+  .contenedor-whatsapp_titulo {
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 90px;
+  }
+
+  #mensaje-whatsapp {
+    font-weight: normal;
+    font-family: var(--font_titulos);
+  }
+
+  .whatsapp {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 300px;
+    gap: 70px;
+  }
+
+  .div-imagen-whatsapp {
+    display: flex;
+    justify-content: center;
+  }
+
+  #qr {
+    border-radius: 30px;
+    -webkit-box-shadow: 18px 32px 29px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 18px 32px 29px -8px rgba(0, 0, 0, 0.75);
+    box-shadow: 18px 32px 29px -8px rgba(0, 0, 0, 0.75);
+  }
+
+  @media (width < 1150px) {
+    .whatsapp {
+      flex-direction: column;
+    }
+
+    .div-qr {
+      display: flex;
+      justify-content: center;
+    }
+
+    .formulario {
+      margin-bottom: 100px;
+    }
+  }
+
+  @media (width < 633px) {
+    #contenedor_form {
+      height: 740px;
+    }
+
+    .contenedor-whatsapp_titulo {
+      margin-top: 250px;
+    }
+  }
+</style>
+
+<script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+></script>
+
+<script type="module">
+  import SECRET_KEY from "../../config.js";
+
+  emailjs.init(SECRET_KEY || import.meta.env.SECRET_KEY);
+</script>
+
+<script type="module">
+  const btn = document.querySelector(".btn");
+
+  document
+    .querySelector("#formulario")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      btn.value = "Sending...";
+
+      const serviceID = "default_service";
+      const templateID = "template_owoiijg";
+
+      emailjs.sendForm(serviceID, templateID, this).then(
+        () => {
+          btn.value = "Send";
+          alert("submitted form!");
+        },
+        (err) => {
+          btn.value = "Send";
+          alert(JSON.stringify(err));
+        }
+      );
+
+      document.querySelector("#formulario").reset();
+    });
+</script>

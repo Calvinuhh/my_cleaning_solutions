@@ -1,0 +1,152 @@
+---
+import { Image } from "astro:assets";
+import imagenHeader from "../assets/img/Logo-color.png";
+
+const { headers, routes, language } = Astro.props;
+---
+
+<div class="contenedor_header">
+  <header id="header">
+    <Image id="image_logo" src={imagenHeader} alt="logo" />
+  </header>
+
+  <div class="contenedor_navbar">
+    <nav id="navbar">
+      <a id="home" class="navbar_button" href={routes.index}>{headers.home}</a>
+      <a id="services" class="navbar_button" href={routes.services}
+        >{headers.services}</a
+      >
+      <a id="contact" class="navbar_button" href={routes.contact}
+        >{headers.contact}</a
+      >
+    </nav>
+  </div>
+
+  <div id="button">
+    <a id="button_language" href={routes.redirect}>{language}</a>
+  </div>
+</div>
+
+<style>
+  .contenedor_header {
+    display: flex;
+    justify-content: space-evenly;
+    background: linear-gradient(rgba(126, 109, 109, 0.836), rgb(0 0 0 / 65%)),
+      url("../assets/img/desinfectar-casa.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+  }
+
+  #header {
+    padding: 50px 150px;
+  }
+
+  #image_logo {
+    width: 400px;
+    height: 300px;
+  }
+
+  #button_language {
+    background-color: var(--naranja);
+    padding: 10px 30px;
+    margin: 0;
+    color: white;
+    font-family: "Rouna Bold";
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    position: absolute;
+    right: 50px;
+    transition: 0.4s ease;
+  }
+
+  #button_language:hover {
+    background-color: var(--gris_oscuro);
+    color: black;
+    transform: scale(1.1);
+  }
+
+  .contenedor_navbar {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  #navbar {
+    display: flex;
+    padding: 0 150px;
+    margin-left: 180px;
+    gap: 70px;
+  }
+
+  .navbar_button {
+    font-family: "Rouna Bold";
+    text-decoration: none;
+    color: white;
+    background-color: var(--naranja);
+    padding: 8px 10px;
+    border-radius: 4px;
+    transition: 0.4s ease;
+  }
+
+  .navbar_button:hover {
+    color: black;
+    background-color: var(--gris_oscuro);
+    transform: scale(1.13);
+  }
+
+  .actual {
+    background-color: var(--gris_oscuro);
+  }
+
+  .actual:hover {
+    transform: none;
+    color: white;
+  }
+
+  @media (width < 1430px) {
+    .contenedor_header {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+    }
+
+    #header {
+      padding: 10px 150px;
+    }
+
+    #button {
+      position: absolute;
+      top: 0px;
+      right: 10px;
+    }
+
+    #image_logo {
+      width: 350px;
+    }
+    .contenedor_navbar {
+      margin-bottom: 80px;
+    }
+    #navbar {
+      flex-direction: column;
+      gap: 0;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+
+    .navbar_button {
+      transition: 0.4 ease;
+      padding: 10px 150px;
+    }
+  }
+
+  @media (width < 633px) {
+    .contenedor_header {
+      height: 500px;
+      background-position: bottom;
+    }
+  }
+</style>

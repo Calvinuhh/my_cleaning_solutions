@@ -1,0 +1,58 @@
+---
+import icon from "../assets/img/Logo-color.ico";
+const { pageTitle, lang, content, keywords } = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href={icon} />
+    <meta name="description" content={content} />
+    <meta name="keywords" content={keywords} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyCleaningSolution | {pageTitle}</title>
+  </head>
+  <body>
+    <slot />
+
+    <footer class="contenedor_footer">
+      <h3></h3>
+    </footer>
+  </body>
+</html>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap");
+
+  :root {
+    --font_principal: "Roboto Slab";
+    --font_titulos: "MuseoModerno";
+    --naranja: #ee7225b2;
+    --gris_oscuro: #a0a0a0;
+    --gris_claro: #cfc9cd;
+  }
+
+  @font-face {
+    font-family: "Impact";
+    src: url("../assets/fonts/impact.ttf");
+    font-weight: bold;
+  }
+
+  @font-face {
+    font-family: "Rouna Bold";
+    src: url("../assets/fonts/Rouna-Bold.otf");
+    font-weight: normal;
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: linear-gradient(to top, var(--naranja) 1%, white 65%);
+  }
+</style>

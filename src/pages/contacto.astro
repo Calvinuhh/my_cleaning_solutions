@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Form from "../components/Form.astro";
+import textos from "../utils/texts.json";
+
+const {
+  headerEspañol,
+  routesSpanish,
+  headerLanguage: { english },
+  footerEspañol,
+  formEspañol,
+  messageContact: { spanish },
+} = textos;
+---
+
+<Layout
+  pageTitle="Contacto"
+  lang="es"
+  content="Empresa de limpieza que ofrece sus servicios en Miami, Florida"
+  keywords="Limpieza, Empresa de Limpieza, Servicios de Limpieza"
+>
+  <Header headers={headerEspañol} routes={routesSpanish} language={english} />
+  <Form data={formEspañol} message={spanish} />
+  <Footer footer={footerEspañol} />
+</Layout>
+
+<script>
+  const button = document.querySelector("#button");
+  const buttonLanguage = document.querySelector("#button_language");
+
+  button.addEventListener("click", () => {
+    if (window.location.pathname === "/contacto") {
+      buttonLanguage.setAttribute("href", "/contact");
+    }
+  });
+
+  const buttonNav = document.querySelector("#contact");
+
+  if (window.location.pathname === "/contacto") {
+    buttonNav.classList.add("actual");
+  }
+</script>

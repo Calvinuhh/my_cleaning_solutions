@@ -1,0 +1,66 @@
+---
+import pic1 from "../assets/img/imagen-limpieza1.jpg";
+import pic2 from "../assets/img/imagen-limpieza2.jpg";
+import pic3 from "../assets/img/imagen-limpieza3.jpg";
+import { Image } from "astro:assets";
+const { services } = Astro.props;
+---
+
+<section id="contenedor_section">
+  <div class="service">
+    <Image class="service_image" src={pic1} alt="cleaning pic 1" />
+    <p class="service_text">{services.p1}</p>
+  </div>
+
+  <div class="service">
+    <Image class="service_image" src={pic2} alt="cleaning pic 2" />
+    <p class="service_text">{services.p2}</p>
+  </div>
+
+  <div class="service">
+    <Image class="service_image" src={pic3} alt="cleaning pic 3" />
+    <p class="service_text">{services.p3}</p>
+  </div>
+</section>
+
+<style>
+  #contenedor_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    margin-bottom: 200px;
+    gap: 150px;
+  }
+
+  .service {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 60px;
+  }
+
+  .service_image {
+    width: 400px;
+    height: 300px;
+    border-radius: 50%;
+    -webkit-box-shadow: 18px 32px 29px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 18px 32px 29px -8px rgba(0, 0, 0, 0.75);
+    box-shadow: 18px 32px 29px -8px rgba(0, 0, 0, 0.75);
+  }
+
+  .service_text {
+    font-size: 23px;
+    height: 150px;
+    width: 370px;
+    font-family: "impact";
+  }
+
+  @media (width< 1400px) {
+    #contenedor_section {
+      flex-direction: column;
+    }
+  }
+</style>

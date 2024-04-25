@@ -1,0 +1,45 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Section from "../components/Section.astro";
+import textos from "../utils/texts.json";
+
+const {
+  headerEspañol,
+  routesSpanish,
+  headerLanguage: { english },
+  footerEspañol,
+  servicesPageEspañol,
+} = textos;
+---
+
+<Layout
+  pageTitle="Servicios"
+  lang="es"
+  content="Empresa de limpieza que ofrece sus servicios en Miami, Florida"
+  keywords="Limpieza, Empresa de Limpieza, Servicios de Limpieza"
+>
+  <Header headers={headerEspañol} routes={routesSpanish} language={english} />
+  <Section services={servicesPageEspañol} />
+  <Footer footer={footerEspañol} />
+</Layout>
+
+<style></style>
+
+<script>
+  const button = document.querySelector("#button");
+  const buttonLanguage = document.querySelector("#button_language");
+
+  button.addEventListener("click", () => {
+    if (window.location.pathname === "/servicios") {
+      buttonLanguage.setAttribute("href", "/services");
+    }
+  });
+
+  const buttonNav = document.querySelector("#services");
+
+  if (window.location.pathname === "/servicios") {
+    buttonNav.classList.add("actual");
+  }
+</script>
